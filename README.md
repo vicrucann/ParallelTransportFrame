@@ -1,6 +1,6 @@
 # Parallel Transport Frame algorithm implementation
 
-A C++ and OpenSceneGraph-based class implementation based on *Parallel Transport Approach to Curve Framing* by A.J. Hanson and H. Ma, 1995. Some implementation details are based on Cinder's implementation. 
+A C++ and OpenSceneGraph-based class implementation based on *Parallel Transport Approach to Curve Framing* by A.J. Hanson and H. Ma, 1995. Some implementation details are based on Cinder's implementation of PTF. 
 
 ## Requirements
 
@@ -39,6 +39,21 @@ extrusion.build();
 osg::Node* mesh = extrusion.generateTriMesh();
 // ...
 ```
+
+## Provided example usage
+
+The provided example demonstrates the calculation of PTF and its usage when generating graphics output. Four types of output is possible:
+
+1. Original curve path.
+2. PTF slices.
+3. Wireframe.
+4. Triangular mesh.
+
+In order to see the different outputs, use keyboard and press `0` to display the original path, `1` - to display the PTF slices, `2` - to display the wireframe and `3` - to display the result triangular mesh. 
+
+The types of outputs are summarized in the gif image below:
+
+![Screenshot](https://github.com/vicrucann/ParallelTransportFrame/blob/master/images/PTF.png)
 
 ## Licence
 

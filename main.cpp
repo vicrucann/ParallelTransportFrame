@@ -57,10 +57,10 @@ public:
         osg::ref_ptr<osg::Node> slices = extrusion.generateFrameSlices(1.f);
         osg::ref_ptr<osg::Node> wire = extrusion.generateWireFrame();
 
-        this->addChild(path.get(), true);
+        this->addChild(path.get(), false);
         this->addChild(wire.get(), false);
         this->addChild(slices.get(), false);
-        this->addChild(mesh.get(), false);
+        this->addChild(mesh.get(), true);
     }
 };
 
@@ -92,9 +92,14 @@ public:
                 index = 2;
                 break;
             case '3':
-            default:
                 std::cout << "Triangular mesh display.\n";
                 index = 3;
+                break;
+            default:
+                for (unsigned int i=0; i<m_root->getNumChildren(); ++i){
+                    if (m_root->getValue(i))
+                        index = i;
+                }
                 break;
             }
 
@@ -124,7 +129,7 @@ int main(int, char**)
     viewer.setUpViewInWindow(100,100,OSG_WIDTH, OSG_HEIGHT);
 
     osg::ref_ptr<osg::Group> root = new osg::Group();
-    root->addChild(createReferenceShape());
+//    root->addChild(createReferenceShape());
 
     PTFTube extrusion(createLinePoints3d(), 0.5, 5);
     extrusion.build();
