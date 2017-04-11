@@ -44,10 +44,10 @@ osg::Node* mesh = extrusion.generateTriMesh();
 
 The provided example demonstrates the calculation of PTF and its usage when generating graphics output. Four types of output is possible:
 
-1. Original curve path.
-2. PTF slices.
-3. Wireframe.
-4. Triangular mesh.
+1. Original curve path (displayed in green color).
+2. PTF slices (white color).
+3. Wireframe (magenta color).
+4. Triangular mesh (gray color).
 
 In order to see the different outputs, use keyboard and press `0` to display the original path, `1` - to display the PTF slices, `2` - to display the wireframe and `3` - to display the result triangular mesh. 
 
