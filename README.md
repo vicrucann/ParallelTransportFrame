@@ -53,7 +53,7 @@ In order to see the different outputs, use keyboard and press `0` to display the
 
 The types of outputs are summarized in the gif image below:
 
-![Screenshot](https://github.com/vicrucann/ParallelTransportFrame/blob/master/images/PTF.png)
+![Screenshot](https://github.com/vicrucann/ParallelTransportFrame/blob/master/images/PTF.gif)
 
 ## Licence
 
